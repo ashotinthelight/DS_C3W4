@@ -15,7 +15,7 @@ load_data <- function() {
     #   Column 2 is the numerical test subject ID (range of 1 to 30)
     #   Column 3 is the activity name done by lookup of the test_activities into the activity_labels (named "activity" so the rbind later works).  This is requirement 3 from the assignment.
     #   Column 4..564 are the data columns, labeled by the feature labels
-    test_set <<- cbind(type = "TEST", test_subjects, activity = sapply(test_activities[,1], function(x) { activity_labels[x,2]}), test_data)
+    test_set <<- cbind(type = "TEST", test_subjects, activity = sapply(test_activities[,1], function(x) { activity_labels[activity_labels$activity_id == x,2]}), test_data)
 
     # Load the TRAIN data into a second data set
 
@@ -25,7 +25,7 @@ load_data <- function() {
     train_subjects <<- read.delim("data\\train\\subject_train.txt", header = FALSE, sep = " ", col.names = c("subject_id"), colClasses = c("factor"))
     train_data <<- read.fwf("data\\train\\x_train.txt", rep(16, 561), header = FALSE)
     names(train_data) = feature_labels[,2]
-    train_set <<- cbind(type = "TRAIN", train_subjects, activity = sapply(train_activities[,1], function(x) { activity_labels[x,2]}), train_data)
+    train_set <<- cbind(type = "TRAIN", train_subjects, activity = sapply(train_activities[,1], function(x) { activity_labels[activity_labels$activity_id == x,2]}), train_data)
 
     # Merge the two sets into one giant set (requirement 1 from the assignment)
 

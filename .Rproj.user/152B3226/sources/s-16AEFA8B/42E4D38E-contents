@@ -24,14 +24,19 @@
 ## Create a "final" data.frame
 ##   Column 1 is the constant "TEST" to indicate the data here is from the TEST dataset
 ##   Column 2 is the numerical test subject ID (range of 1 to 30)
-##   Column 3 is the activity name done by lookup of the test_activities into the activity_labels (named "activity" so the rbind later works).  # (REQUIREMENT 2)
-##   Column 4..564 are the data columns, labeled by the feature labels.  # (REQUIREMENT 3)
+# (REQUIREMENT 2)
+##   Column 3 is the activity name done by lookup of the test_activities into the activity_labels (named "activity" so the rbind later works).
+# (REQUIREMENT 3)
+##   Column 4..564 are the data columns, labeled by the feature labels.
 
 ## After these steps were completed, the columns where joined together using cbind() into a new set for each TRAIN and TEST data sets
-## And finally, the two sets were joined using rbind() into one complete set.  # (REQUIREMENT 1)
+# (REQUIREMENT 1)
+## And finally, the two sets were joined using rbind() into one complete set.
 
-## Once the final set was formed, I used regex to isolate the columns with mean() and std() in the names (actually -mean()- and -std()-) per featuresInfo.txt
+## Once the final set was formed, I used regex to isolate the columns with mean() and std() in the names (actually -mean()- and -std()-) per features_info.txt
 ## grep() returned the collection of matching column names.  I also wanted columsn 1-3 that have the data set type (TRAIN vs. TEST), the subject, and the activity.
-## The column vector was used to narrow the results # (REQUIREMENT 4).
+# (REQUIREMENT 4)
+## The column vector was used to narrow the results.
 
-## Finally, dplyr, group_by(), and summarise_at() were used to get the column mean() by subject/activity # (REQUIREMENT 5)
+# (REQUIREMENT 5)
+## Finally, dplyr, group_by(), and summarise_at() were used to get the column mean() by subject/activity
