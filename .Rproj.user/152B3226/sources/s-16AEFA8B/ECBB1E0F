@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1515299859270.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2336555169",
+    "id" : "ECBB1E0F",
+    "lastKnownWriteTime" : 1515317022,
+    "last_content_update" : 1515317022039,
+    "path" : "S:/Projects/DataScience/C3W4/run_analysis.R",
+    "project_path" : "run_analysis.R",
+    "properties" : {
+        "cursorPosition" : "24,148",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}
